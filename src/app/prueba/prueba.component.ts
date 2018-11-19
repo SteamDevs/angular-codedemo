@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { DemoService } from '../services/demo.service';
+import { DemoService } from '../services/demo.service'
 
 @Component({
   selector: 'app-prueba',
@@ -10,18 +10,19 @@ import { DemoService } from '../services/demo.service';
 })
 export class PruebaComponent implements OnInit {
 
-  users: any = []
-  
-  constructor(public http: HttpClient,
-    public _demoService: DemoService) { }  
+  users : any = [];
+
+  constructor(public http: HttpClient, public _demoService: DemoService) { }
 
   ngOnInit() {
-    this.showUs()
+    this.showUsers();
   }
 
-  showUs(){
-    this._demoService.apiData()
-          .subscribe(users => this.users = users ) 
+  showUsers(){
+
+    this._demoService.getData()
+      .subscribe( users => this.users = users )
+  
   }
 
 }
