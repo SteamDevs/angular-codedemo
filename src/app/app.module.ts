@@ -8,14 +8,28 @@ import { DemoService } from './services/demo.service'
 
 import { HttpClientModule  } from '@angular/common/http';
 
+import { APP_ROUTES } from './app.routes';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PerfilComponent } from './perfil/perfil.component'
+
+import { RouterModule, Routes } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PruebaComponent
+    PruebaComponent,
+    SidebarComponent,
+    NavbarComponent,
+    DashboardComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    APP_ROUTES,
+    RouterModule
   ],
   providers: [
     DemoService

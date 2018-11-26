@@ -1,1 +1,41 @@
-<app-prueba></app-prueba>
+
+<app-navbar></app-navbar>
+
+<div class="container">
+
+    <router-outlet></router-outlet>
+</div>
+
+<div class="container">
+    <div class="wrapper">
+                 
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Bienvenido Donovan</h3>
+            </div>
+    
+            <ul class="list-unstyled components">
+            
+               <img class="card-img-top" src="assets/usuario.jpg" alt="Card image cap" width="10">
+             
+               <li class="active">
+                    <a routerLink="/perfil" data-toggle="collapse" aria-expanded="false">Perfil</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                    </ul>
+                </li>
+                <li>
+                    <a href="file:///C:/Angular/tabla.html">Gestor de Usuario</a>
+                    <a href="file:///C:/Angular/quix.html">Gestion de eventos</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                    </ul>
+                </li>
+                <li>
+                </li>
+                <li>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+</div>
+
